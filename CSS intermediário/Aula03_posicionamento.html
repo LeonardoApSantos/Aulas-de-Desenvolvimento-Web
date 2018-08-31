@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Posicionamento - Aula 03,04</title>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+		body{
+			background: #61bd8c;
+			padding: 10px;
+		}
+		#conteudoPrincipal{
+			background: #ffffff;
+			padding: 10px;
+			width: 90%;
+			margin: 30px auto;
+			height: 2550px;
+			margin-top: 100px;
+		}
+		.caixa{
+			background: #1e6f44;
+			width: 100px;
+			height: 100px;
+			color: #ffffff;
+		}
+		#relativo{
+			position: relative;
+			right: 30px;
+			width: 600px;
+
+		}
+		#absoluta{
+			position: absolute;
+			bottom: 0px;
+			right: 30px;
+		}
+		#fixo{
+			position: fixed;
+			top: 0px;
+			width: 100%;
+			left: 0px;
+			background: black;
+		}
+	</style>
+</head>
+<body>
+	<div id="conteudoPrincipal">
+		<h1>Posicionamento</h1>
+
+		<h4>Relative</h4>
+		<div id="relativo" class="caixa">Relative</div>
+
+		<h4>Absolute</h4>
+		<div id="absoluta" class="caixa">Absolute</div>
+
+		<h4>Fixed</h4>
+		<div id="fixo" class="caixa">Fixed</div>
+	</div>
+</body>
+</html>
