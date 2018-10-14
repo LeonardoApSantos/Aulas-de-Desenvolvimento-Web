@@ -1,0 +1,100 @@
+/*********bordas arredondadas*****************/
+#box{
+	width: 300px;
+	height: 300px;
+	border-radius: 0px 30px;
+	background: orange;
+}
+
+/*********Imagem no background*****************/
+#box1{
+	width: 300px;
+	height: 300px;
+	background: url("../img/camera.png");
+}
+#box1 h1{/*Dessa forma, apenas o h1 do box é formatado*/
+	background: rgba(255,255,255,0.5);
+	border-bottom: white solid 2px;
+	/*Essas duas linhas deixam um efeito interessante*/
+}
+/*********Degrade*****************/
+#box2{
+	width:  300px;
+	height: 300px;
+	/*45deg para graus ou to right para direções fixas*/
+	/*background: linear-gradient(to top, orange, blue);*/
+	background: radial-gradient(orange, blue);
+}
+#box3{
+	width:  300px;
+	height: 300px;
+	/*45deg para graus ou to right para direções fixas*/
+	background: linear-gradient(to top, orange, blue);
+}
+/*********Sombras*****************/
+#box4{
+	width: 300px;
+	height: 300px;
+	margin: 50px auto;
+	padding: 8px;
+	background-color: lightgreen;
+	/*box-shadow: 5px 5px 5px 1px darkgreen;*/
+	box-shadow: 5px 5px 2px green, 10px 10px 2px darkgreen;
+}
+#box4 h1{
+	color: white;
+	font-size: 60px;
+	/*text-shadow: -5px 5px 5px black;*/
+	/*text-shadow: -5px 5px rgba(0,0,0,0.5);*/
+	text-shadow: 4px 4px black;
+}
+/*********Animações*****************/
+@keyframes animacao-box{
+	/*início*/
+	from{
+		background: red; 
+		border-radius: 0px; 
+		top: 0; 
+		left: 0;
+	}
+	/*fim*/
+	to{
+		background: yellow; 
+		border-radius: 300px; 
+		top: 200px; 
+		left: 200px;
+	}
+}
+
+#box-animacao{
+	background: red;
+	width: 300px;
+	height: 300px;
+
+	position: relative;
+	/*para encontrar a animação*/
+	animation-name: animacao-box;
+	/*tempo de duração*/
+	animation-duration: 3s;
+	/*tempo de espera para iniciar*/
+	animation-delay: 0s;
+	/*vezes de repetição(varia dependendo da direção)*/
+	animation-iteration-count: 4;
+	/*faz a animação ao inverso(consome um interation-
+	count)*/
+	animation-direction: alternate;*/
+	/*é possível escriver tudo numa linha só
+	animation: animacao-box 3s 0s 4 alternate;*/	
+}
+/*********Transições*****************/
+#box-transicao{
+	width: 300px;
+	height: 300px;
+	background-color: orange;
+}
+#box-transicao:hover{
+	width: 400px;
+	background: black;
+	/*transition: all;*/
+	transition: background 3s, width 8s;
+}
